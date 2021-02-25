@@ -9,6 +9,10 @@
 $bg: white;
 $main: gray;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -47,51 +51,65 @@ body {
   display: grid;
   grid-template-columns: 20% auto 20%;
   grid-template-rows: 3.5rem auto;
+  border-radius: 50 50 50 50;
 }
 
 .slideout {
+  overflow:hidden;
+  transition:height 0.3s ease-out;
+  height:auto;
   display: none;
-  visibility: hidden;
+  flex: 0;
   z-index: 2;
   flex-direction: column;
   grid-column-start: 1;
   grid-column-end: span 3;
-  transition: all .5s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 .dark {
   position: fixed;
-  display: none;
   visibility: hidden;
   top: 0;
-  height: 100vh;
   width: 100%;
   background-color: black;
   opacity: 60%;
   z-index: 1;
-  transition: all .5s ease-in-out;
 }
 
 .menu-out {
   display: flex;
+  flex: 1;
   visibility: visible;
-  transition: all 1.5s ease-in-out;
+}
+
+.menu-out.dark {
+  height: 100vh;
 }
 
 .slideout button {
-  border: none;
-  padding: 1.25rem;
   font-size: 1.25rem;
-  font-family: sans-serif;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  border-width: 0;
+}
+
+.slideout button:nth-child(1) {
+  border-bottom-width: 1px;
+}
+
+.slideout button:nth-child(2) {
+  border-bottom-width: 1px;
 }
 
 .slideout button a {
   display: block;
   width: auto;
-  height: auto;
+  height: 100%;
+  padding: 1.25rem;
   text-decoration: none;
   color: black;
-  text-shadow: $main 1px 1px 2px;
+  text-shadow: gray 1px 1px 2px;
 }
 
 .burger {
@@ -113,6 +131,7 @@ body {
   width: 2rem;
   background: black;
   transition: all .1s ease-in-out;
+  vertical-align: middle;
 }
 
 .line::before{
@@ -151,6 +170,7 @@ body {
 .logo {
   grid-column: 1;
   margin: auto;
+  filter: drop-shadow(2px 2px white);
 }
 
 .blank {
@@ -165,8 +185,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 3rem;
-  text-shadow: 1px 1px 2px white;;
+  font-size: 2.5rem;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  text-shadow: 1px 1px 2px white;
 }
 
 .line.line-active {
@@ -180,4 +202,11 @@ body {
 
 .line.line-active::after{
   transform: rotate(-45deg);
+}
+
+#ab, #st, #ar {
+  scroll-behavior: smooth;
+    margin-top: -3.5rem; 
+    padding-top: 3.5rem; 
+    display: inline-block;
 }
