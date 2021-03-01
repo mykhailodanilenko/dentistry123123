@@ -28,7 +28,7 @@ dark.addEventListener('click', toggleMenu);
 
 // scroll to top
 let scrollToTopBtn = document.getElementById('scrollToTopBtn');
-let target = document.querySelector('#ab');
+let target = document.querySelector('.cool-image');
 function callback(entries, observer) {
     // The callback will return an array of entries, even if you are only observing a single item
     entries.forEach(entry => {

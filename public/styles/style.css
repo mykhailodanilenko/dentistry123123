@@ -17,6 +17,18 @@ body {
   z-index: 0;
 }
 
+button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+input[type=submit] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
 .cool-image {
   top: 3.5rem;
   background-image: url("https://images.unsplash.com/photo-1599410110298-56ab00841c11?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
@@ -52,7 +64,7 @@ body {
   top: 0px;
   z-index: 2;
   width: 100%;
-  background-color: gray;
+  background-color: #71c7ec;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 20% auto 20%;
@@ -105,7 +117,7 @@ body {
 }
 
 .menu-out.dark {
-  height: 100vh;
+  height: 100%;
 }
 
 .slideout button {
@@ -113,6 +125,8 @@ body {
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   border-width: 0;
+  background-color: #f8fcfe;
+  margin: 0;
 }
 
 .slideout button:nth-child(1) {
@@ -139,7 +153,7 @@ body {
   padding: 0;
   margin: 0;
   border: 0;
-  background-color: gray;
+  background-color: #71c7ec;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -196,7 +210,7 @@ body {
 }
 
 .burger.open {
-  background-color: #888888;
+  background-color: #7eccee;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
@@ -294,12 +308,12 @@ body {
       -ms-grid-row-align: center;
       align-self: center;
   margin-bottom: 1.4rem;
-  width: 40%;
+  width: 80%;
   -webkit-box-shadow: 1px 1px 2px black;
           box-shadow: 1px 1px 2px black;
   border-radius: 50%;
-  border: 3px solid gray;
-  border-color: gray;
+  border: 3px solid #71c7ec;
+  border-color: #71c7ec;
 }
 
 #st {
@@ -327,24 +341,24 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  bottom: 5rem;
-  right: 2rem;
-  background-color: gray;
+  bottom: 2rem;
+  right: 3.7rem;
+  background-color: lighten #71c7ec, 70%;
   border: 1px solid lightgray;
   -webkit-box-shadow: 1px 1px 4px white;
           box-shadow: 1px 1px 4px white;
   border-radius: 50%;
   color: white;
   cursor: pointer;
-  line-height: 4rem;
-  width: 4rem;
-  height: 4rem;
+  line-height: 3rem;
+  width: 3rem;
+  height: 3rem;
   padding: auto;
-  -webkit-transform: translateY(9rem);
-          transform: translateY(9rem);
+  -webkit-transform: translateY(5rem);
+          transform: translateY(5rem);
+  z-index: 0.5;
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
-  z-index: 0.5;
 }
 
 .showBtn {
@@ -369,7 +383,7 @@ body {
   border-radius: .5rem;
   width: 100%;
   height: 3rem;
-  background-color: gray;
+  background-color: #71c7ec;
   color: black;
   text-shadow: 1px 1px 3px white;
   font-family: "Poppins", sans-serif;
@@ -378,15 +392,16 @@ body {
 }
 
 .footer {
-  background-color: gray;
+  background-color: #71c7ec;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
-  -ms-grid-rows: 3.5rem auto;
-      grid-template-rows: 3.5rem auto;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
   margin: 0;
   margin-top: 1.4rem;
+  padding-bottom: 0.7rem;
 }
 
 .footer p {
@@ -396,33 +411,29 @@ body {
   text-align: center;
 }
 
-.insta, .twi, .yt, .fb {
+.footer img {
+  width: 3rem;
+  stroke: gray;
+  fill: gray;
+}
+
+.footer div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .disclaimer {
   padding: .5rem;
-  background-color: gray;
+  background-color: #71c7ec;
   border-top: solid 1px black;
   font-size: .5rem;
   margin-top: .7rem;
-}
-
-.header-social {
-  display: none;
-}
-
-.insta button {
-  padding: auto;
-  text-align: center;
-  vertical-align: middle;
 }
 /*# sourceMappingURL=style.css.map */

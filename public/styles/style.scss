@@ -7,7 +7,7 @@
 // colors
 
 $bg: white;
-$main: gray;
+$main: #71c7ec;
 
 html {
   scroll-behavior: smooth;
@@ -20,6 +20,14 @@ body {
   font-family: "Poppins", sans-serif;
   width: 100%;
   z-index: 0;
+}
+
+button {
+  appearance: none;
+}
+
+input[type=submit] {
+  appearance: none;
 }
 
 .cool-image {
@@ -55,9 +63,9 @@ body {
 }
 
 .slideout {
-  overflow:hidden;
-  transition:height 0.3s ease-out;
-  height:auto;
+  overflow: hidden;
+  transition: height 0.3s ease-out;
+  height: auto;
   display: none;
   flex: 0;
   z-index: 2;
@@ -84,7 +92,7 @@ body {
 }
 
 .menu-out.dark {
-  height: 100vh;
+  height: 100%;
 }
 
 .slideout button {
@@ -92,6 +100,8 @@ body {
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   border-width: 0;
+  background-color: lighten($main, 30%);
+  margin: 0;
 }
 
 .slideout button:nth-child(1) {
@@ -130,7 +140,6 @@ body {
   border-radius: 10%/50%;
   width: 2rem;
   background: black;
-  
   filter: drop-shadow(2px 2px white);
   transition: all .1s ease-in-out;
 }
@@ -220,7 +229,6 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(1rem, 24rem));
   grid-template-rows: repeat(auto-fit, auto);
   justify-content: center;
-  //grid-template-rows: repeat(6 1fr);
 }
 
 .container-doctor {
@@ -233,7 +241,7 @@ body {
 .container-doctor img {
   align-self: center;
   margin-bottom: 1.4rem;
-  width: 40%;
+  width: 80%;
   box-shadow: 1px 1px 2px black;
   border-radius: 50%;
   border: 3px solid $main;
@@ -259,21 +267,21 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  bottom: 5rem;
-  right: 2rem;
-  background-color: $main;
+  bottom: 2rem;
+  right: 3.7rem;
+  background-color: lighten ($main, 70%);
   border: 1px solid lightgray;
   box-shadow: 1px 1px 4px white;
   border-radius: 50%;
   color: white;
   cursor: pointer;
-  line-height: 4rem;
-  width: 4rem;
-  height: 4rem;
+  line-height: 3rem;
+  width: 3rem;
+  height: 3rem;
   padding: auto;
-  transform: translateY(9rem);
-  transition: all .2s ease;
+  transform: translateY(5rem);
   z-index: 0.5;
+  transition: all .2s ease;
 }
 
 .showBtn {
@@ -308,9 +316,10 @@ body {
   background-color: $main;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 3.5rem auto;
+  grid-template-rows: auto auto;
   margin: 0;
   margin-top: 1.4rem;
+  padding-bottom: 0.7rem;
 }
 
 .footer p {
@@ -318,10 +327,16 @@ body {
   text-align: center;
 }
 
-.insta,.twi,.yt,.fb {
+.footer img {
+  width: 3rem;
+  stroke: gray;
+  fill:gray;
+}
+
+.footer div {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .disclaimer {
@@ -332,12 +347,6 @@ body {
   margin-top: .7rem;
 }
 
-.header-social {
-  display: none;
-}
+.footer img:hover {
 
-.insta button {
-  padding: auto;
-  text-align: center;
-  vertical-align: middle;
 }
