@@ -3,9 +3,12 @@ const menu = document.querySelector('.slideout');
 const dark = document.querySelector('.dark');
 const menuButtons = document.querySelectorAll('.btn-menu');
 const line = document.querySelector('.line');
+const viewWidth = window.innerWidth;
+
 
 function toggleMenu(e){
-    if (burger.classList.contains('open') || menu.classList.contains('.menu-out')){
+  if (window.innerWidth <= 768) {
+  if (burger.classList.contains('open') || menu.classList.contains('.menu-out')){
     burger.classList.remove('open');
     menu.classList.remove('menu-out');
     dark.classList.remove('menu-out');
@@ -18,6 +21,9 @@ function toggleMenu(e){
         line.classList.add('line-active');
         document.body.style.overflow = "hidden";
         }
+      } else {
+        return;
+      }
 }
 
 burger.addEventListener('click', toggleMenu);
@@ -26,11 +32,10 @@ menuButtons.forEach(Element => {
 });
 dark.addEventListener('click', toggleMenu);
 
-// scroll to top
+// Scroll to top button
 let scrollToTopBtn = document.getElementById('scrollToTopBtn');
 let target = document.querySelector('.cool-image');
 function callback(entries, observer) {
-    // The callback will return an array of entries, even if you are only observing a single item
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         // Show button

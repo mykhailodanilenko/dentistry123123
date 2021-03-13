@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 // colors
@@ -10,448 +10,505 @@ $bg: white;
 $main: #71c7ec;
 
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  background-color: $bg;
-  font-family: "Poppins", sans-serif;
-  width: 100%;
-  z-index: 0;
+	margin: 0;
+	padding: 0;
+	background-color: $bg;
+	font-family: "Poppins", sans-serif;
+	width: 100%;
+	z-index: 0;
 }
 
 button {
-  appearance: none;
+	appearance: none;
 }
 
-input[type=submit] {
-  appearance: none;
+input[type="submit"] {
+	appearance: none;
 }
 
 .cool-image {
-  top: 3.5rem;
-  background-image: url("https://images.unsplash.com/photo-1599410110298-56ab00841c11?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
-  background-size: cover;
-  height: 300px;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+	top: 3.5rem;
+	background-image: url("https://images.unsplash.com/photo-1599410110298-56ab00841c11?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
+	background-size: cover;
+	height: 300px;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
 }
 
 .cool-image h1 {
-  margin-left: .5rem;
-  margin-right: .5rem;
-  color: $bg;
-  text-shadow: 1px 1px 2px black;
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+	color: $bg;
+	text-shadow: 1px 1px 2px black;
 }
 
 .nav {
-  position: fixed;
-  top: 0px;
-  z-index: 2;
-  width: 100%;
-  background-color: $main;
-  display: grid;
-  grid-template-columns: 20% auto 20%;
-  grid-template-rows: 3.5rem auto;
-  box-shadow: 0px 0px 5px 1px gray;
+	position: fixed;
+	top: 0px;
+	z-index: 2;
+	width: 100%;
+	background-color: $main;
+	display: grid;
+	grid-template-columns: 20% auto 20%;
+	grid-template-rows: 3.5rem auto;
+	box-shadow: 0px 0px 5px 1px gray;
 }
 
 .slideout {
-  overflow: hidden;
-  transition: height 0.3s ease-out;
-  height: auto;
-  display: none;
-  flex: 0;
-  z-index: 2;
-  flex-direction: column;
-  grid-column-start: 1;
-  grid-column-end: span 3;
-  transition: all .2s ease-in-out;
+	overflow: hidden;
+	transition: height 0.3s ease-out;
+	height: auto;
+	display: none;
+	flex: 0;
+	z-index: 2;
+	flex-direction: column;
+	grid-column-start: 1;
+	grid-column-end: span 3;
+	transition: all 0.2s ease-in-out;
 }
 
 .dark {
-  position: fixed;
-  visibility: hidden;
-  top: 0;
-  width: 100%;
-  background-color: black;
-  opacity: 60%;
-  z-index: 1;
+	position: fixed;
+	visibility: hidden;
+	top: 0;
+	width: 100%;
+	background-color: black;
+	opacity: 60%;
+	z-index: 1;
 }
 
 .menu-out {
-  display: flex;
-  flex: 1;
-  visibility: visible;
+	display: flex;
+	flex: 1;
+	visibility: visible;
 }
 
 .menu-out.dark {
-  height: 100%;
+	height: 100%;
 }
 
 .slideout button {
-  font-size: 1.25rem;
-  font-weight: 600;
-  font-family: "Poppins", sans-serif;
-  border-width: 0;
-  background-color: lighten($main, 30%);
-  margin: 0;
+	font-size: 1.25rem;
+	font-weight: 600;
+	font-family: "Poppins", sans-serif;
+	border-width: 0;
+	background-color: lighten($main, 30%);
+	margin: 0;
 }
 
 .slideout button:nth-child(1) {
-  border-bottom-width: 1px;
-  //box-shadow: inset 0px 0px 5px 1px gray;
-  background: linear-gradient(gray 1px, lighten($main, 30%) 4px);
+	border-bottom-width: 1px;
+	//box-shadow: inset 0px 0px 5px 1px gray;
+	background: linear-gradient(gray 1px, lighten($main, 30%) 4px);
 }
 
 .slideout button:nth-child(2) {
-  border-bottom-width: 1px;
+	border-bottom-width: 1px;
 }
 
 .slideout button a {
-  display: block;
-  width: auto;
-  height: 100%;
-  padding: 1.25rem;
-  text-decoration: none;
-  color: black;
-  text-shadow: gray 1px 1px 2px;
+	display: block;
+	width: auto;
+	height: 100%;
+	padding: 1.25rem;
+	text-decoration: none;
+	color: black;
+	text-shadow: gray 1px 1px 2px;
 }
 
 .burger {
-  grid-column-start: 3;
-  padding: 0;
-  margin: 0;
-  border: 0;
-  background-color: $main;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
+	grid-column-start: 3;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	background-color: $main;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
 }
 
 .line {
-  display: block;
-  height: .19rem;
-  border-radius: 10%/50%;
-  width: 2rem;
-  background: black;
-  filter: drop-shadow(2px 2px white);
-  transition: all .1s ease-in-out;
+	display: block;
+	height: 0.19rem;
+	border-radius: 10%/50%;
+	width: 2rem;
+	background: black;
+	filter: drop-shadow(2px 2px white);
+	transition: all 0.1s ease-in-out;
 }
 
-.line::before{
-  content: "";
-  position: absolute;
-  display: block;
-  height: .19rem;
-  border-radius: 10%/50%;
-  width: 2rem;
-  background: black;
-  transform: translateY(16px);
-  transition: all .2s ease-in-out;
+.line::before {
+	content: "";
+	position: absolute;
+	display: block;
+	height: 0.19rem;
+	border-radius: 10%/50%;
+	width: 2rem;
+	background: black;
+	transform: translateY(16px);
+	transition: all 0.2s ease-in-out;
 }
 
 .line::after {
-  content: "";
-  position: absolute;
-  display: block;
-  height: .19rem;
-  border-radius: 10%/50%;
-  width: 2rem;
-  background: black;
-  transform: translateY(-16px);
-  transition: all .2s ease-in-out;
+	content: "";
+	position: absolute;
+	display: block;
+	height: 0.19rem;
+	border-radius: 10%/50%;
+	width: 2rem;
+	background: black;
+	transform: translateY(-16px);
+	transition: all 0.2s ease-in-out;
 }
 
 .burger.open {
-  background-color: lighten($color: $main, $amount: 3);
-  transition: all .2s ease-in-out;
+	background-color: lighten($color: $main, $amount: 3);
+	transition: all 0.2s ease-in-out;
 }
 
 .burger img {
-  vertical-align: middle;
+	vertical-align: middle;
 }
 
 .logo {
-  grid-column: 1;
-  margin: auto;
-  filter: drop-shadow(2px 2px white);
+	grid-column: 1;
+	margin: auto;
+	filter: drop-shadow(2px 2px white);
 }
 
 .blank {
-  height: 3.5rem;
-  position: relative;
-  top: 0px;
-  z-index: 0;
+	height: 3.5rem;
+	position: relative;
+	top: 0px;
+	z-index: 0;
 }
 
 .logo-text {
-  grid-column: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2.5rem;
-  font-weight: 600;
-  font-family: "Poppins", sans-serif;
-  filter: drop-shadow(2px 2px white);
+	grid-column: 2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2.5rem;
+	font-weight: 600;
+	font-family: "Poppins", sans-serif;
+	filter: drop-shadow(2px 2px white);
 }
 
 .line.line-active {
-  background: transparent;
+	background: transparent;
 }
 
-.line.line-active::before{
-  transform: rotate(45deg);
+.line.line-active::before {
+	transform: rotate(45deg);
 }
 
-.line.line-active::after{
-  transform: rotate(-45deg);
+.line.line-active::after {
+	transform: rotate(-45deg);
 }
 
-#ab, #st, #ar {
-    margin-top: -3.5rem; 
-    padding-top: 3.5rem; 
+#ab,
+#st,
+#ar {
+	margin-top: -3.5rem;
+	padding-top: 3.5rem;
 }
 
 .about {
-  margin: 0;
-  padding: 0 .7rem;
-  padding-bottom: .7rem;
+	margin: 0;
+	padding: 0 0.7rem;
+	padding-bottom: 0.7rem;
 }
 
 .wrapper-staff {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(1rem, 24rem));
-  grid-template-rows: repeat(auto-fit, auto);
-  justify-content: center;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(1rem, 24rem));
+	grid-template-rows: repeat(auto-fit, auto);
+	justify-content: center;
 }
 
 .container-doctor {
-  padding: .7rem;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+	padding: 0.7rem;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
 }
 
 .container-doctor img {
-  align-self: center;
-  margin-bottom: 1.4rem;
-  width: 80%;
-  box-shadow: 1px 1px 2px black;
-  border-radius: 50%;
-  border: 3px solid $main;
-  border-color: $main;
+	align-self: center;
+	margin-bottom: 1.4rem;
+	width: 80%;
+	box-shadow: 1px 1px 2px black;
+	border-radius: 50%;
+	border: 3px solid $main;
+	border-color: $main;
 }
 
 #st {
-  width: 100%;
-  padding-left: 0.7rem;
-  padding-right: 0.7rem;
-  margin-bottom: 0.7rem;
+	width: 100%;
+	padding-left: 0.7rem;
+	padding-right: 0.7rem;
+	margin-bottom: 0.7rem;
 }
 
 .appt {
-  width: 100%;
-  padding-left: 0.7rem;
-  padding-right: 0.7rem;
-  margin-bottom: 0.7rem;
+	width: 100%;
+	padding-left: 0.7rem;
+	padding-right: 0.7rem;
+	margin-bottom: 0.7rem;
 }
 
 .scr-btn {
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  bottom: 2rem;
-  right: 3.7rem;
-  background-color: lighten($main, 15%);
-  border: 1px solid lightgray;
-  box-shadow: 1px 1px 4px white;
-  border-radius: 50%;
-  color: white;
-  cursor: pointer;
-  line-height: 3rem;
-  width: 3rem;
-  height: 3rem;
-  padding: auto;
-  transform: translateY(5rem);
-  z-index: 0.5;
-  transition: all .2s ease;
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	bottom: 2rem;
+	right: 3.7rem;
+	background-color: lighten($main, 15%);
+	border: 1px solid lightgray;
+	box-shadow: 1px 1px 4px white;
+	border-radius: 50%;
+	color: white;
+	cursor: pointer;
+	line-height: 3rem;
+	width: 3rem;
+	height: 3rem;
+	padding: auto;
+	transform: translateY(5rem);
+	z-index: 0.5;
+	transition: all 0.2s ease;
 }
 
 .showBtn {
-  transform: translateY(0);
+	transform: translateY(0);
 }
 
 #scrollToTopBtn img {
-  height: 65%;
-  pointer-events: none;
-  filter: drop-shadow(2px 2px white);
+	height: 65%;
+	pointer-events: none;
+	filter: drop-shadow(2px 2px white);
 }
 
 #select-insurance {
-  margin-bottom: 1.33em;
+	margin-bottom: 1.33em;
 }
 
 .submit {
-  margin-top: .7rem;
-  border: .5px solid black;
-  border-radius: .5rem;
-  width: 100%;
-  height: 3rem;
-  background-color: $main;
-  color: black;
-  text-shadow: (1px 1px 3px white);
-  font-family: "Poppins", sans-serif;
-  font-size: 1.25rem;
-  font-weight: 600;
+	margin-top: 0.7rem;
+	border: 0.5px solid black;
+	border-radius: 0.5rem;
+	width: 100%;
+	height: 3rem;
+	background-color: $main;
+	color: black;
+	text-shadow: (1px 1px 3px white);
+	font-family: "Poppins", sans-serif;
+	font-size: 1.25rem;
+	font-weight: 600;
 }
 
 .footer {
-  background-color: $main;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto auto;
-  margin: 0;
-  margin-top: 1.4rem;
-  padding-bottom: 0.7rem;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+	background-color: $main;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: auto auto;
+	margin: 0;
+	margin-top: 1.4rem;
+	padding-bottom: 0.7rem;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
 }
 
 .footer p {
-  grid-column: 1 / span 4;
-  text-align: center;
+	grid-column: 1 / span 4;
+	text-align: center;
 }
 
 .footer img {
-  width: 3rem;
-  stroke: gray;
-  fill:gray;
+	width: 3rem;
+	stroke: gray;
+	fill: gray;
 }
 
 .footer div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .disclaimer {
-  padding: .5rem;
-  background-color: $main;
-  border-top: solid 1px black;
-  font-size: .5rem;
-  margin-top: .7rem;
+	padding: 0.5rem;
+	background-color: $main;
+	border-top: solid 1px black;
+	font-size: 0.5rem;
+	margin-top: 0.7rem;
 }
 
 .form-select {
-  display: block;
-  width: 100%;
-  padding: 0.375rem 2.25rem 0.375rem 0.75rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #212529;
-  background-color: #fff;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
-  background-repeat: no-repeat;
-  background-position: right 0.75rem center;
-  background-size: 16px 12px;
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+	display: block;
+	width: 100%;
+	padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #212529;
+	background-color: #fff;
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+	background-repeat: no-repeat;
+	background-position: right 0.75rem center;
+	background-size: 16px 12px;
+	border: 1px solid #ced4da;
+	border-radius: 0.25rem;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 }
 .form-select:focus {
-  border-color: $main;
-  outline: 0;
-  box-shadow: 0 0 0 0.25rem $main;
+	border-color: $main;
+	outline: 0;
+	box-shadow: 0 0 0 0.25rem $main;
 }
-.form-select[multiple], .form-select[size]:not([size="1"]) {
-  padding-right: 0.75rem;
-  background-image: none;
+.form-select[multiple],
+.form-select[size]:not([size="1"]) {
+	padding-right: 0.75rem;
+	background-image: none;
 }
 .form-select:disabled {
-  color: #6c757d;
-  background-color: #e9ecef;
+	color: #6c757d;
+	background-color: #e9ecef;
 }
 .form-select:-moz-focusring {
-  color: transparent;
-  text-shadow: 0 0 0 #212529;
+	color: transparent;
+	text-shadow: 0 0 0 #212529;
 }
 
 .calendar {
-  display: block;
-  width: 100%;
-  padding: 0.375rem 0.75rem 0.375rem 0.75rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #212529;
-  background-color: #fff;
-  //background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
-  background-repeat: no-repeat;
-  background-position: right 0.75rem center;
-  background-size: 16px 12px;
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+	display: block;
+	width: 100%;
+	padding: 0.375rem 0.75rem 0.375rem 0.75rem;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #212529;
+	background-color: #fff;
+	//background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+	background-repeat: no-repeat;
+	background-position: right 0.75rem center;
+	background-size: 16px 12px;
+	border: 1px solid #ced4da;
+	border-radius: 0.25rem;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 }
 .calendar:focus {
-  border-color: #86b7fe;
-  outline: 0;
-  box-shadow: 0 0 0 0.25rem $main;
+	border-color: #86b7fe;
+	outline: 0;
+	box-shadow: 0 0 0 0.25rem $main;
 }
 
 .calendar:disabled {
-  color: #6c757d;
-  background-color: #e9ecef;
+	color: #6c757d;
+	background-color: #e9ecef;
 }
 .calendar:-moz-focusring {
-  color: transparent;
-  text-shadow: 0 0 0 #212529;
+	color: transparent;
+	text-shadow: 0 0 0 #212529;
 }
 
 .input-name {
-  display: block;
-  width: 100%;
-  padding: 0.375rem 0.75rem 0.375rem 0.75rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #212529;
-  background-color: #fff;
-  //background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
-  background-repeat: no-repeat;
-  background-position: right 0.75rem center;
-  background-size: 16px 12px;
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+	display: block;
+	width: 100%;
+	padding: 0.375rem 0.75rem 0.375rem 0.75rem;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #212529;
+	background-color: #fff;
+	//background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+	background-repeat: no-repeat;
+	background-position: right 0.75rem center;
+	background-size: 16px 12px;
+	border: 1px solid #ced4da;
+	border-radius: 0.25rem;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 }
 .input-name:focus {
-  border-color: #86b7fe;
-  outline: 0;
-  box-shadow: 0 0 0 0.25rem $main;
+	border-color: #86b7fe;
+	outline: 0;
+	box-shadow: 0 0 0 0.25rem $main;
 }
 
 .input-name:disabled {
-  color: #6c757d;
-  background-color: #e9ecef;
+	color: #6c757d;
+	background-color: #e9ecef;
 }
 .input-name:-moz-focusring {
-  color: transparent;
-  text-shadow: 0 0 0 #212529;
+	color: transparent;
+	text-shadow: 0 0 0 #212529;
+}
+
+@media (min-width: 768px) {
+	@mixin bigScreenMenu {
+		.nav {
+			grid-template-columns: 20% 20% 20% 20% 20%;
+			grid-template-rows: 3.5rem;
+			width: 100%;
+		}
+		.slideout {
+			display: flex;
+			flex-direction: row;
+			grid-column-start: 3;
+			grid-column-end: span 3;
+			width: 100%;
+		}
+		.burger {
+			display: none;
+		}
+		.dark {
+			display: none;
+			overflow: auto;
+		}
+
+		.slideout button {
+			font-size: 1.25rem;
+			font-weight: 600;
+			font-family: "Poppins", sans-serif;
+			border-width: 0;
+			margin: 0;
+      background-color: $main;
+      padding: 0;
+		}
+
+		.slideout button a {
+			display: block;
+			width: auto;
+			height: 100%;
+			padding: 1.25rem;
+			text-decoration: none;
+			color: black;
+			text-shadow: gray 1px 1px 2px;
+		} 
+    .slideout button:nth-child(1) {
+      border-bottom-width: none;
+      //box-shadow: inset 0px 0px 5px 1px gray;
+      background: $main;
+    }
+    
+    .slideout button:nth-child(2) {
+      border-bottom-width: none;
+    }
+	}
+	@include bigScreenMenu();
 }
