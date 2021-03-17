@@ -24,7 +24,7 @@ const db = firebase.firestore();
 // Menu logic
 
 function toggleMenu(e){
-  if (window.innerWidth <= 768) {
+  if (window.innerWidth < 768) {
   if (burger.classList.contains('open') || menu.classList.contains('.menu-out')){
     burger.classList.remove('open');
     menu.classList.remove('menu-out');

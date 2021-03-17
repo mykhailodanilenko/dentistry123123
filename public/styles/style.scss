@@ -183,6 +183,7 @@ input[type="submit"] {
 	grid-column: 1;
 	margin: auto;
 	filter: drop-shadow(2px 2px white);
+	height: 2em;
 }
 
 .blank {
@@ -458,69 +459,102 @@ input[type="submit"] {
 	color: transparent;
 	text-shadow: 0 0 0 #212529;
 }
-
-@media (min-width: 768px) {
-	@mixin bigScreenMenu {
-		.nav {
-			grid-template-columns: 10% 35% 1fr 1fr 2.5fr;
-			grid-template-rows: 3.5em;
-			width: 100%;
-		}
-		.slideout {
-			display: contents;
-			grid-column-start: 3;
-			grid-column-end: span 3;
-			width: 100%;
-		}
-		.burger {
-			display: none;
-		}
-		.dark {
-			display: none;
-			overflow: auto;
-		}
-
-		.slideout button {
-			font-size: 0.7em;
-			font-weight: 600;
-			font-family: "Poppins", sans-serif;
-			border-width: 0;
-			margin: 0;
-			background-color: $main;
-			padding: 0;
-		}
-
-		.slideout button a {
-			width: auto;
-			height: 3.5rem;
-			padding: 0;
-			line-height: 3.5rem;
-			text-decoration: none;
-			color: black;
-			text-shadow: gray 1px 1px 2px;
-		}
-		.slideout button:nth-child(1) {
-			border-bottom: none;
-			background: $main;
-			grid-column-start: 3;
-			grid-column-end: 4;
-		}
-
-		.slideout button:nth-child(2) {
-			border-bottom: none;
-			grid-column-start: 4;
-			grid-column-end: 5;
-		}
-
-		.slideout button:nth-child(3) {
-			border-bottom: none;
-			grid-column-start: 5;
-			grid-column-end: 6;
-		}
+@mixin bigScreenMenu($sacd) {
+	.nav {
+		grid-template-columns: 10% 35% 1fr 1fr 2.5fr;
+		grid-template-rows: 3.5rem;
+		width: 100%;
 	}
-	@include bigScreenMenu();
-	
+	.slideout {
+		display: contents;
+		grid-column-start: 3;
+		grid-column-end: span 3;
+		width: 100%;
+	}
+	.burger {
+		display: none;
+	}
+	.dark {
+		display: none;
+		overflow: auto;
+	}
+
+	.slideout button {
+		font-size: 0.7em;
+		font-weight: 600;
+		font-family: "Poppins", sans-serif;
+		border-width: 0;
+		margin: 0;
+		background-color: $main;
+		padding: 0;
+	}
+
+	.slideout button a {
+		width: auto;
+		height: 3.5rem;
+		padding: 0;
+		line-height: 3.5rem;
+		text-decoration: none;
+		color: black;
+		text-shadow: gray 1px 1px 2px;
+	}
+	.slideout button:nth-child(1) {
+		border-bottom: none;
+		background: $main;
+		grid-column-start: 3;
+		grid-column-end: 4;
+	}
+
+	.slideout button:nth-child(2) {
+		border-bottom: none;
+		grid-column-start: 4;
+		grid-column-end: 5;
+	}
+
+	.slideout button:nth-child(3) {
+		border-bottom: none;
+		grid-column-start: 5;
+		grid-column-end: 6;
+	}
+	.logo-text {
+		line-height: 0;
+		text-indent: -99999px;
+	}
+	.logo-text::after {
+		content: "San Antonio Central Dentistry";
+		text-indent: 0;
+		line-height: initial;
+		font-size: $sacd;
+	}
+}
+
+@mixin bigScreenForm() {
+	.form-appt {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.form-appt * {
+		max-width: 50%;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	body {
+		font-size: 20px;
+	}
+	@include bigScreenMenu(18px);
+	@include bigScreenForm();
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
 	body {
 		font-size: 24px;
+	}
+	@include bigScreenMenu(22px);
+	@include bigScreenForm();
+	.wrapper-staff {
+		column-gap: 10%;
 	}
 }
