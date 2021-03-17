@@ -646,6 +646,7 @@ input[type="submit"] {
   }
   .form-appt * {
     max-width: 50%;
+    line-height: 2;
   }
 }
 
@@ -736,10 +737,129 @@ input[type="submit"] {
   }
   .form-appt * {
     max-width: 50%;
+    line-height: 2;
   }
   .wrapper-staff {
     -webkit-column-gap: 10%;
             column-gap: 10%;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 2559px) {
+  body {
+    font-size: 24px;
+  }
+  .nav {
+    -ms-grid-columns: 10% 35% 1fr 1fr 2.5fr;
+        grid-template-columns: 10% 35% 1fr 1fr 2.5fr;
+    -ms-grid-rows: 3.5rem;
+        grid-template-rows: 3.5rem;
+    width: 100%;
+  }
+  .slideout {
+    display: contents;
+    -ms-grid-column: 3;
+        grid-column-start: 3;
+    -ms-grid-column-span: 3;
+        grid-column-end: span 3;
+    width: 100%;
+  }
+  .burger {
+    display: none;
+  }
+  .dark {
+    display: none;
+    overflow: auto;
+  }
+  .slideout button {
+    font-size: 0.7em;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    border-width: 0;
+    margin: 0;
+    background-color: #71c7ec;
+    padding: 0;
+  }
+  .slideout button a {
+    width: auto;
+    height: 3.5rem;
+    padding: 0;
+    line-height: 3.5rem;
+    text-decoration: none;
+    color: black;
+    text-shadow: gray 1px 1px 2px;
+  }
+  .slideout button:nth-child(1) {
+    border-bottom: none;
+    background: #71c7ec;
+    -ms-grid-column: 3;
+        grid-column-start: 3;
+    grid-column-end: 4;
+  }
+  .slideout button:nth-child(2) {
+    border-bottom: none;
+    -ms-grid-column: 4;
+        grid-column-start: 4;
+    grid-column-end: 5;
+  }
+  .slideout button:nth-child(3) {
+    border-bottom: none;
+    -ms-grid-column: 5;
+        grid-column-start: 5;
+    grid-column-end: 6;
+  }
+  .logo-text {
+    line-height: 0;
+    text-indent: -99999px;
+  }
+  .logo-text::after {
+    content: "San Antonio Central Dentistry";
+    text-indent: 0;
+    line-height: initial;
+    font-size: 22px;
+  }
+  .form-appt {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .form-appt * {
+    max-width: 50%;
+    line-height: 2;
+  }
+  .wrapper-staff {
+    -webkit-column-gap: 5%;
+            column-gap: 5%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cool-image {
+    background-image: url("https://images.unsplash.com/photo-1599410110298-56ab00841c11?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80");
+    background-position: 0% 30%;
+  }
+  .footer {
+    -ms-grid-columns: 10% 10% 10% 10%;
+        grid-template-columns: 10% 10% 10% 10%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .form-appt h4:nth-child(1) {
+    margin-top: 0;
+  }
+  .wrapper-staff {
+    margin-bottom: 1em;
   }
 }
 /*# sourceMappingURL=style.css.map */
