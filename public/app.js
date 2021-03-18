@@ -5,6 +5,8 @@ const menuButtons = document.querySelectorAll('.btn-menu');
 const line = document.querySelector('.line');
 const viewWidth = window.innerWidth;
 const subForm = document.querySelector('.form-appt');
+const popUp = document.querySelector('.popup');
+const popUpBtn = document.querySelector('.btn-thankyou2');
 
 // Initialize Firebase
 
@@ -75,13 +77,25 @@ function formSub(e) {
   dbRef.add({
     name: document.querySelector('.input-name').value,
     date: document.querySelector('.calendar').value,
+    phone: document.querySelector('.phone-input').value,
     ins: document.querySelector('#select-insurance').value,
     submittedOn: serverTimestamp()
   });
+  popUp.classList.add('showpopup');
+  document.body.style.overflowY = "hidden";
   subForm.reset();
 }
 
+// Close thank you popup
+
+popUpBtn.addEventListener('click', closePopup);
+function closePopup(e) {
+  popUp.classList.remove('showpopup');
+  document.body.style.overflowY = "";
+}
+
 // Scroll to top button
+
 let scrollToTopBtn = document.getElementById('scrollToTopBtn');
 let target = document.querySelector('.cool-image');
 function callback(entries, observer) {

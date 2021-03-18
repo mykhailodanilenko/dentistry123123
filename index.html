@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,6 +8,7 @@
     <link rel="icon" type="image/svg+xml" href="./public/tooth-svgrepo-com.svg">
     <link rel="stylesheet" href="./public/styles/style.css">
 </head>
+
 <body>
     <div class="blank"></div>
     <div class="dark"></div>
@@ -63,16 +65,21 @@
         <h3 id="ar">Request an appointment with one of our dentists</h3>
         <form action="" class="form-appt">
             <h4>Your name:</h4>
-            <input class="input-name" type="text" placeholder="Your name">
+            <input required class="input-name" minlength="2" type="text" placeholder="Your name">
             <h4>Date:</h4>
-            <input class="calendar" type="date">
+            <input required class="calendar" type="date" max="2050-01-01">
+            <h4>Phone number:</h4>
+            <input required type="tel" class="phone-input" minlength="10">
             <h4>Insurance:</h4>
-            <select name="insurance" id="select-insurance" class="form-select">
+            <select required name="insurance" id="select-insurance" class="form-select">
+                <option disabled selected value="bcbs">Choose...</option>
+                <option value="bcbs">None</option>
                 <option value="bcbs">Blue Cross Blue Shield</option>
                 <option value="uhc">United HealthCare</option>
                 <option value="aetna">Aetna</option>
                 <option value="guardian">Guardian</option>
                 <option value="delta">Delta</option>
+                <option value="delta">Other</option>
             </select>
             <input value="Submit" class="submit" type="submit">
         </form>
@@ -97,6 +104,11 @@
                     src="./public/iconfinder_395_Youtube_logo_4375133.svg" alt=""></a>
         </div>
     </footer>
+    <div class="popup">
+        <div class="popupcontent">
+            <div class="popuptext">Thank you for contacting San Antonio Central Dentisitry! <br>Your request will be answered within 24 hours.<button class="btn-thankyou2">Thank you too!</button></div>
+        </div>
+    </div>
     <div class="disclaimer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas iste voluptate culpa saepe
         suscipit obcaecati? Itaque obcaecati facilis sapiente sint?</div>
     <!---Firebase scripts--->
@@ -106,4 +118,5 @@
 </body>
 <!--Main JS script-->
 <script src="./public/app.js"></script>
+
 </html>
