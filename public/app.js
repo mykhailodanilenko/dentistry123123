@@ -82,7 +82,6 @@ function formSub(e) {
     submittedOn: serverTimestamp()
   });
   popUp.classList.add('showpopup');
-  document.body.style.overflowY = "hidden";
   subForm.reset();
 }
 
@@ -91,7 +90,6 @@ function formSub(e) {
 popUpBtn.addEventListener('click', closePopup);
 function closePopup(e) {
   popUp.classList.remove('showpopup');
-  document.body.style.overflowY = "";
 }
 
 // Scroll to top button
