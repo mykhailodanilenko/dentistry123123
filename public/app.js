@@ -11,12 +11,12 @@ const popUpBtn = document.querySelector('.btn-thankyou2');
 // Initialize Firebase
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAc1Z_BUV2UQ9a5ZtpUyiBptaXN1elnwxI",
-  authDomain: "dentistry-70241.firebaseapp.com",
-  projectId: "dentistry-70241",
-  storageBucket: "dentistry-70241.appspot.com",
-  messagingSenderId: "1049850525458",
-  appId: "1:1049850525458:web:18476e32b901134e2865cb"
+  apiKey: "AIzaSyDPyg2uJEGkz9eNpA6dhH60dhzoXt5yAHM",
+  authDomain: "dentistry-7a55b.firebaseapp.com",
+  projectId: "dentistry-7a55b",
+  storageBucket: "dentistry-7a55b.appspot.com",
+  messagingSenderId: "633876959193",
+  appId: "1:633876959193:web:f581a97f03424de981d3c8"
 };
 
 firebase.initializeApp(firebaseConfig);
