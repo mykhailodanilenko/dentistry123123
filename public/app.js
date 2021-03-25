@@ -11,7 +11,7 @@ const popUpBtn = document.querySelector('.btn-thankyou2');
 // Initialize Firebase
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCtFTUQobBOKhoEAWM2goVfLCbEtrYnXPY",
+  apiKey: "AIzaSyBKI_bxndw-had46uu4N_YYe4Zo7rZ348Y",
   authDomain: "dentistry-7a55b.firebaseapp.com",
   projectId: "dentistry-7a55b",
   storageBucket: "dentistry-7a55b.appspot.com",
