@@ -53,7 +53,7 @@ input[type="submit"] {
 .nav {
 	position: fixed;
 	top: 0px;
-	z-index: 2;
+	z-index: 3;
 	width: 100%;
 	background-color: $main;
 	display: grid;
@@ -68,7 +68,7 @@ input[type="submit"] {
 	height: auto;
 	display: none;
 	flex: 0;
-	z-index: 2;
+	z-index: 3;
 	flex-direction: column;
 	grid-column-start: 1;
 	grid-column-end: span 3;
@@ -82,7 +82,7 @@ input[type="submit"] {
 	width: 100%;
 	background-color: black;
 	opacity: 60%;
-	z-index: 1;
+	z-index: 2;
 }
 
 .menu-out {
@@ -285,7 +285,7 @@ input[type="submit"] {
 	height: 3rem;
 	padding: auto;
 	transform: translateY(5rem);
-	z-index: 0.5;
+	z-index: 1;
 	transition: all 0.2s ease;
 }
 
