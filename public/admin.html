@@ -1,65 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-   
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin panel</title>
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin panel</title>
+  <style>
+    #wrapperLoader {
+      width: 100vw;
+      height: 100vh;
+      z-index: 2;
+      background-color: white;
+      vertical-align: middle;
+    }
+  </style>
+  
 </head>
+
 <body>
-    <nav>
-        <div class="nav-wrapper blue">
-          <a class="brand-logo center">SACD admin panel</a>
-        </div>
-      </nav>
+  <nav>
+    <div class="nav-wrapper blue">
+      <a class="brand-logo center">SACD admin panel</a>
+      <ul id="nav-mobile" class="right">
+        <li>
+          <a class="btn hide" id="signOutBtn">Sign Out</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div id="wrapperLoader" class="valign-wrapper">
+  <div class="progress">
+      <div class="indeterminate"></div>
+    </div>
+  </div>
+  <div id="whenSignedOut" class="hide">
+    <div class="container">
       <div class="row">
-        <form class="col s12">
-          <div class="row">Admin Login:</div>
+        <form class="col s12" id="loginForm">
+          <div class="row"><h3>Admin Login:</h3></div>
+          <div class="row"><h5>Use "admin@test.sacd" and "password" as your credentials</h5></div>
           <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field col s6">
               <input id="email" type="email" class="validate">
               <label for="email">Email</label>
             </div>
           </div>
           <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field col s6">
               <input id="password" type="password" class="validate">
               <label for="password">Password</label>
             </div>
           </div>
-          </form>
+          <button id="signInBtn" class="btn" type="submit">Login</button>
+        </form>
       </div>
+    </div>
+  </div>
+  <div id="whenSignedIn" class="hide">
     <div class="container">
       <table class="responsive striped">
-          <thead>
-            <tr>
-                <th>Name</th>
-                <th>Date</th>
-                <th>Phone</th>
-                <th>Insurance</th>
-                <th>Date submitted</th>
-                <th></th>
-            </tr>
-          </thead>
-          <tbody id="table-body">
-          </tbody>
-        </table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Phone</th>
+            <th>Insurance</th>
+            <th>Date submitted</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+        </tbody>
+      </table>
     </div>
+  </div>
 
 
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <!---Firebase scripts--->
-    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
-    <!-- My JS -->
-    <script src="./admin.js"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!---Firebase scripts--->
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+  <!-- My JS -->
+  <script src="./admin.js"></script>
 </body>
+
 </html>

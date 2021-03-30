@@ -14,12 +14,53 @@ firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 const auth = firebase.auth();
 
+// Authentication
+
+const signInBtn = document.getElementById('signInBtn');
+const signOutBtn = document.getElementById('signOutBtn');
+const whenSignedIn = document.getElementById('whenSignedIn');
+const whenSignedOut = document.getElementById('whenSignedOut');
+const loginForm = document.getElementById('loginForm');
+let email = document.getElementById('email');
+let password = document.getElementById('password');
+
+loginForm.addEventListener('submit', loginAction);
+
+function loginAction(e) {
+  e.preventDefault();
+  firebase.auth().signInWithEmailAndPassword(email.value, password.value)
+  .then((userCredential) => {
+    // Signed in
+    var user = userCredential.user;
+    loader.classList.add('hide');
+    loginForm.reset();
+    // ...
+  })
+  .catch((error) => {
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    console.log(error.code);
+    console.log(error.message);
+  });
+};
+
+signOutBtn.addEventListener('click', signOutAction);
+
+function signOutAction() {
+  firebase.auth().signOut().then(() => {
+    // Sign-out successful.
+  }).catch((error) => {
+    // An error happened.
+  });
+};
+
 // Build table
 
 const dbRef = db.collection('apptrq');
 const table = document.getElementById('table-body');
 
-let unsubscribe = dbRef.onSnapshot(querySnapshot => { 
+let buildTable = function(){
+dbRef.get().then((querySnapshot) => { 
   const appts = querySnapshot.docs.map(doc => {
     const phone = parseInt(doc.data().phone);
     let insurance = doc.data().ins;
@@ -56,17 +97,55 @@ let unsubscribe = dbRef.onSnapshot(querySnapshot => {
   <td><button data-docID="${doc.id}" class="blue btn-floating btn-small waves-effect waves-light btnDelete"><i style="pointer-events:none;" class="center material-icons">clear</i></button></td>
   </tr>`);
 });
+while (table.firstChild) {
+  table.firstChild.remove();
+}
 table.insertAdjacentHTML("afterbegin", appts.join(''));
-unsubscribe();
-
+loader.classList.add('hide');
 let deleteButtons = document.querySelectorAll('.btnDelete');
 deleteButtons.forEach(element => {
   element.addEventListener('click', deleteEvent);
 });
 });
+};
+
 
 function deleteEvent(e){
   const deleted = e.target.parentElement.parentElement;
   dbRef.doc(`${e.target.dataset.docid}`).delete();
   deleted.remove();
 }
+
+// Render functions
+
+let loader = document.querySelector('#wrapperLoader');
+
+function renderLoggedIn(){
+  loader.classList.remove('hide');
+  whenSignedOut.classList.add('hide');
+  whenSignedIn.classList.remove('hide');
+  signOutBtn.classList.remove('hide');
+}
+
+function renderLoggedOut(){
+  loader.classList.remove('hide');
+  whenSignedIn.classList.add('hide');
+  whenSignedOut.classList.remove('hide');
+  signOutBtn.classList.add('hide');
+  loader.classList.add('hide');
+}
+
+auth.onAuthStateChanged(user => {
+  if (user){
+    renderLoggedIn();
+    buildTable();
+  } else {
+    renderLoggedOut();
+  }
+});
+/* 
+window.addEventListener('load', loaderAnimation);
+let loader = document.querySelector('.preloader-wrapper');
+function loaderAnimation(e){
+  loader.classList.add('hide');
+} */
