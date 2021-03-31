@@ -777,8 +777,10 @@ input[type='submit'] {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .form-appt * {
+  .form-appt input:not(.submit), select {
     line-height: 2;
+  }
+  .form-appt input, select {
     max-width: 50%;
   }
   body {
@@ -868,8 +870,10 @@ input[type='submit'] {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .form-appt * {
+  .form-appt input:not(.submit), select {
     line-height: 2;
+  }
+  .form-appt input, select {
     max-width: 50%;
   }
   body {
@@ -963,8 +967,10 @@ input[type='submit'] {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .form-appt * {
+  .form-appt input:not(.submit), select {
     line-height: 2;
+  }
+  .form-appt input, select {
     max-width: 50%;
   }
   body {
@@ -1058,8 +1064,10 @@ input[type='submit'] {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .form-appt * {
+  .form-appt input:not(.submit), select {
     line-height: 2;
+  }
+  .form-appt input, select {
     max-width: 50%;
   }
   body {
@@ -1094,10 +1102,13 @@ input[type='submit'] {
   }
   .input-name,
   .calendar,
-  #select-insurance,
   .phone-input {
     font-size: 30px;
     line-height: 3;
+  }
+  #select-insurance {
+    font-size: 30px;
+    line-height: 2;
   }
   .submit {
     font-size: 30px;
@@ -1138,7 +1149,10 @@ input[type='submit'] {
 }
 
 @media (min-width: 768px) {
-  .form-appt h4:nth-child(1) {
+  .form-appt label:nth-child(1) {
+    margin-top: 0;
+  }
+  #firstofmany {
     margin-top: 0;
   }
   .wrapper-staff {
