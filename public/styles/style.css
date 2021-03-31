@@ -1081,9 +1081,10 @@ input[type="submit"] {
     font-size: 40px;
   }
   .logo {
-    height: 3rem;
+    height: 1.75em;
+    margin: 0.125em auto;
   }
-  .input-name, .calendar, #select-insurance {
+  .input-name, .calendar, #select-insurance, .phone-input {
     line-height: 3;
     font-size: 30px;
   }

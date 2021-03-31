@@ -7,6 +7,7 @@ const viewWidth = window.innerWidth;
 const subForm = document.querySelector('.form-appt');
 const popUp = document.querySelector('.popup');
 const popUpBtn = document.querySelector('.btn-thankyou2');
+const datePicker = document.querySelector('.calendar');
 
 // Initialize Firebase
 
@@ -22,6 +23,12 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 const db = firebase.firestore();
+
+// Date picker
+
+let currentDate = new Date().toISOString().slice(0, 10);
+console.log(currentDate);
+datePicker.setAttribute('min', currentDate);
 
 // Menu logic
 
