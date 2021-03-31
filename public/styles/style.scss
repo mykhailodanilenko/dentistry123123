@@ -32,7 +32,7 @@ input[type='submit'] {
 
 .cool-image {
   align-items: center;
-  background-image: url('/img/photo-1599410110298-56ab00841c11.jpg');
+  background-image: url('../../img/photo-1599410110298-56ab00841c11.jpg');
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -766,7 +766,7 @@ input[type='submit'] {
 
 @media (min-width: 1024px) {
   .cool-image {
-    background-image: url('/img/photo-1599410110298-56ab00841c11\ \(1\).jpg');
+    background-image: url('../../img/photo-1599410110298-56ab00841c11\ \(1\).jpg');
     background-position: 0% 30%;
   }
 

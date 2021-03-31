@@ -33,7 +33,7 @@ input[type='submit'] {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: url("/img/photo-1599410110298-56ab00841c11.jpg");
+  background-image: url("../../img/photo-1599410110298-56ab00841c11.jpg");
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1125,7 +1125,7 @@ input[type='submit'] {
 
 @media (min-width: 1024px) {
   .cool-image {
-    background-image: url("/img/photo-1599410110298-56ab00841c11 (1).jpg");
+    background-image: url("../../img/photo-1599410110298-56ab00841c11 (1).jpg");
     background-position: 0% 30%;
   }
   .footer {
