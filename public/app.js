@@ -12,12 +12,12 @@ const datePicker = document.querySelector('.calendar');
 // Initialize Firebase
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBKI_bxndw-had46uu4N_YYe4Zo7rZ348Y",
-  authDomain: "dentistry-7a55b.firebaseapp.com",
-  projectId: "dentistry-7a55b",
-  storageBucket: "dentistry-7a55b.appspot.com",
-  messagingSenderId: "633876959193",
-  appId: "1:633876959193:web:f581a97f03424de981d3c8"
+  apiKey: 'AIzaSyBKI_bxndw-had46uu4N_YYe4Zo7rZ348Y',
+  authDomain: 'dentistry-7a55b.firebaseapp.com',
+  projectId: 'dentistry-7a55b',
+  storageBucket: 'dentistry-7a55b.appspot.com',
+  messagingSenderId: '633876959193',
+  appId: '1:633876959193:web:f581a97f03424de981d3c8',
 };
 
 firebase.initializeApp(firebaseConfig);
@@ -26,35 +26,34 @@ const db = firebase.firestore();
 
 // Date picker
 
-let currentDate = new Date().toISOString().slice(0, 10);
-console.log(currentDate);
+const currentDate = new Date().toISOString().slice(0, 10);
 datePicker.setAttribute('min', currentDate);
 
 // Menu logic
 
-function toggleMenu(e){
+function toggleMenu(e) {
   if (window.innerWidth < 768) {
-  if (burger.classList.contains('open') || menu.classList.contains('.menu-out')){
-    burger.classList.remove('open');
-    menu.classList.remove('menu-out');
-    dark.classList.remove('menu-out');
-    line.classList.remove('line-active');
-    document.body.style.overflow = '';
+    if (burger.classList.contains('open') || menu.classList.contains('.menu-out')) {
+      burger.classList.remove('open');
+      menu.classList.remove('menu-out');
+      dark.classList.remove('menu-out');
+      line.classList.remove('line-active');
+      document.body.style.overflow = '';
     } else {
-        burger.classList.add('open');
-        menu.classList.add('menu-out');
-        dark.classList.add('menu-out');
-        line.classList.add('line-active');
-        document.body.style.overflow = "hidden";
-        }
-      } else {
-        return;
-      }
+      burger.classList.add('open');
+      menu.classList.add('menu-out');
+      dark.classList.add('menu-out');
+      line.classList.add('line-active');
+      document.body.style.overflow = 'hidden';
+    }
+  } else {
+
+  }
 }
 
 burger.addEventListener('click', toggleMenu);
-menuButtons.forEach(Element => {
-    Element.addEventListener('click', toggleMenu);
+menuButtons.forEach((Element) => {
+  Element.addEventListener('click', toggleMenu);
 });
 dark.addEventListener('click', toggleMenu);
 
@@ -62,31 +61,31 @@ dark.addEventListener('click', toggleMenu);
 
 window.addEventListener('resize', menuClose);
 function menuClose() {
-  if (burger.classList.contains('open') || menu.classList.contains('.menu-out')){
+  if (burger.classList.contains('open') || menu.classList.contains('.menu-out')) {
     burger.classList.remove('open');
     menu.classList.remove('menu-out');
     dark.classList.remove('menu-out');
     line.classList.remove('line-active');
     document.body.style.overflow = '';
-    } else {
-      return;
-    }
+  } else {
+
+  }
 }
 
 // Create a database record
 
-let dbRef = db.collection('apptrq');
+const dbRef = db.collection('apptrq');
 subForm.addEventListener('submit', formSub);
 
 function formSub(e) {
   e.preventDefault();
-  const {serverTimestamp} = firebase.firestore.FieldValue;
+  const { serverTimestamp } = firebase.firestore.FieldValue;
   dbRef.add({
     name: document.querySelector('.input-name').value,
     date: document.querySelector('.calendar').value,
     phone: document.querySelector('.phone-input').value,
     ins: document.querySelector('#select-insurance').value,
-    submittedOn: serverTimestamp()
+    submittedOn: serverTimestamp(),
   });
   popUp.classList.add('showpopup');
   subForm.reset();
@@ -101,26 +100,26 @@ function closePopup(e) {
 
 // Scroll to top button
 
-let scrollToTopBtn = document.getElementById('scrollToTopBtn');
-let target = document.querySelector('.cool-image');
+const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+const target = document.querySelector('.cool-image');
 function callback(entries, observer) {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        // Show button
-        scrollToTopBtn.classList.remove('showBtn');
-      } else {
-        // Hide button
-        scrollToTopBtn.classList.add('showBtn');
-      }
-    });
-  }
-  let observer = new IntersectionObserver(callback);
-  observer.observe(target);
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      // Show button
+      scrollToTopBtn.classList.remove('showBtn');
+    } else {
+      // Hide button
+      scrollToTopBtn.classList.add('showBtn');
+    }
+  });
+}
+const observer = new IntersectionObserver(callback);
+observer.observe(target);
 
-  function scrollToTop() {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    })
-  }
-  scrollToTopBtn.addEventListener("click", scrollToTop);
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+}
+scrollToTopBtn.addEventListener('click', scrollToTop);

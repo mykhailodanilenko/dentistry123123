@@ -9,10 +9,10 @@ html {
 }
 
 body {
+  background-color: white;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: white;
-  font-family: "Poppins", sans-serif;
   width: 100%;
   z-index: 0;
 }
@@ -23,18 +23,18 @@ button {
           appearance: none;
 }
 
-input[type="submit"] {
+input[type='submit'] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
 }
 
 .cool-image {
-  top: 3.5rem;
-  background-image: url("https://images.unsplash.com/photo-1599410110298-56ab00841c11?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url("/img/photo-1599410110298-56ab00841c11.jpg");
   background-size: cover;
-  height: 300px;
-  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -44,66 +44,66 @@ input[type="submit"] {
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  height: 300px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  margin: 0;
+  top: 3.5rem;
 }
 
 .cool-image h1 {
+  color: white;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
-  color: white;
   text-shadow: 1px 1px 2px black;
 }
 
 .nav {
-  position: fixed;
-  top: 0px;
-  z-index: 3;
-  width: 100%;
   background-color: #71c7ec;
+  -webkit-box-shadow: 0 0 5px 1px gray;
+          box-shadow: 0 0 5px 1px gray;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 20% auto 20%;
       grid-template-columns: 20% auto 20%;
   -ms-grid-rows: 3.5rem auto;
       grid-template-rows: 3.5rem auto;
-  -webkit-box-shadow: 0px 0px 5px 1px gray;
-          box-shadow: 0px 0px 5px 1px gray;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3;
 }
 
 .slideout {
-  overflow: hidden;
-  -webkit-transition: height 0.3s ease-out;
-  transition: height 0.3s ease-out;
-  height: auto;
   display: none;
   -webkit-box-flex: 0;
       -ms-flex: 0;
           flex: 0;
-  z-index: 3;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-grid-column: 1;
-      grid-column-start: 1;
   -ms-grid-column-span: 3;
       grid-column-end: span 3;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  height: auto;
+  overflow: hidden;
+  -webkit-transition: height 0.3s ease-out;
+  transition: height 0.3s ease-out;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  z-index: 3;
 }
 
 .dark {
-  position: fixed;
-  visibility: hidden;
-  top: 0;
-  width: 100%;
   background-color: black;
   opacity: 60%;
+  position: fixed;
+  top: 0;
+  visibility: hidden;
+  width: 100%;
   z-index: 2;
 }
 
@@ -122,17 +122,17 @@ input[type="submit"] {
 }
 
 .slideout button {
+  background-color: #f8fcfe;
+  border-width: 0;
+  font-family: 'Poppins', sans-serif;
   font-size: 1.25rem;
   font-weight: 600;
-  font-family: "Poppins", sans-serif;
-  border-width: 0;
-  background-color: #f8fcfe;
   margin: 0;
 }
 
 .slideout button:nth-child(1) {
-  border-bottom-width: 1px;
   background: linear-gradient(gray 1px, #f8fcfe 4px);
+  border-bottom-width: 1px;
 }
 
 .slideout button:nth-child(2) {
@@ -140,22 +140,21 @@ input[type="submit"] {
 }
 
 .slideout button a {
+  color: black;
   display: block;
-  width: auto;
   height: 100%;
   padding: 1.25rem;
   text-decoration: none;
-  color: black;
   text-shadow: gray 1px 1px 2px;
+  width: auto;
 }
 
 .burger {
-  -ms-grid-column: 3;
-      grid-column-start: 3;
-  padding: 0;
-  margin: 0;
-  border: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #71c7ec;
+  border: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -163,52 +162,53 @@ input[type="submit"] {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-grid-column: 3;
+      grid-column-start: 3;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .line {
-  display: block;
-  height: 0.19rem;
-  border-radius: 10%/50%;
-  width: 2rem;
   background: black;
+  border-radius: 10%/50%;
+  display: block;
   -webkit-filter: drop-shadow(2px 2px white);
           filter: drop-shadow(2px 2px white);
+  height: 0.19rem;
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
+  width: 2rem;
 }
 
 .line::before {
-  content: "";
-  position: absolute;
+  background: black;
+  border-radius: 10%/50%;
+  content: '';
   display: block;
   height: 0.19rem;
-  border-radius: 10%/50%;
-  width: 2rem;
-  background: black;
+  position: absolute;
   -webkit-transform: translateY(16px);
           transform: translateY(16px);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  width: 2rem;
 }
 
 .line::after {
-  content: "";
-  position: absolute;
+  background: black;
+  border-radius: 10%/50%;
+  content: '';
   display: block;
   height: 0.19rem;
-  border-radius: 10%/50%;
-  width: 2rem;
-  background: black;
+  position: absolute;
   -webkit-transform: translateY(-16px);
           transform: translateY(-16px);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  width: 2rem;
 }
 
 .burger.open {
@@ -222,38 +222,38 @@ input[type="submit"] {
 }
 
 .logo {
-  -ms-grid-column: 1;
-  grid-column: 1;
-  margin: auto;
   -webkit-filter: drop-shadow(2px 2px white);
           filter: drop-shadow(2px 2px white);
+  -ms-grid-column: 1;
+  grid-column: 1;
   height: 2em;
+  margin: auto;
 }
 
 .blank {
   height: 3.5rem;
   position: relative;
-  top: 0px;
+  top: 0;
   z-index: 0;
 }
 
 .logo-text {
-  -ms-grid-column: 2;
-  grid-column: 2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 2.5rem;
-  font-weight: 600;
-  font-family: "Poppins", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-filter: drop-shadow(2px 2px white);
           filter: drop-shadow(2px 2px white);
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .line.line-active {
@@ -296,86 +296,86 @@ input[type="submit"] {
 }
 
 .container-doctor {
-  padding: 0.7rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0.7rem;
 }
 
 .container-doctor img {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  margin-bottom: 1.4rem;
-  width: 80%;
-  -webkit-box-shadow: 1px 1px 2px black;
-          box-shadow: 1px 1px 2px black;
-  border-radius: 50%;
   border: 3px solid #71c7ec;
   border-color: #71c7ec;
+  border-radius: 50%;
+  -webkit-box-shadow: 1px 1px 2px black;
+          box-shadow: 1px 1px 2px black;
+  margin-bottom: 1.4rem;
+  width: 80%;
 }
 
 #st {
-  width: 100%;
+  margin-bottom: 0.7rem;
   padding-left: 0.7rem;
   padding-right: 0.7rem;
-  margin-bottom: 0.7rem;
+  width: 100%;
 }
 
 .appt {
-  width: 100%;
+  margin-bottom: 0.7rem;
   padding-left: 0.7rem;
   padding-right: 0.7rem;
-  margin-bottom: 0.7rem;
+  width: 100%;
 }
 
 .scr-btn {
-  position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  bottom: 2rem;
-  right: 3.7rem;
   background-color: #b4e2f5;
   border: 1px solid lightgray;
+  border-radius: 50%;
+  bottom: 10rem;
   -webkit-box-shadow: 1px 1px 4px white;
           box-shadow: 1px 1px 4px white;
-  border-radius: 50%;
   color: white;
   cursor: pointer;
-  line-height: 3rem;
-  width: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   height: 3rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  line-height: 3rem;
   padding: auto;
-  -webkit-transform: translateY(5rem);
-          transform: translateY(5rem);
-  z-index: 1;
+  position: fixed;
+  right: 1.75rem;
+  -webkit-transform: translateX(4.75rem);
+          transform: translateX(4.75rem);
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
+  width: 3rem;
+  z-index: 1;
 }
 
 .showBtn {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 #scrollToTopBtn img {
-  height: 65%;
-  pointer-events: none;
   -webkit-filter: drop-shadow(2px 2px white);
           filter: drop-shadow(2px 2px white);
+  height: 65%;
+  pointer-events: none;
 }
 
 #select-insurance {
@@ -383,21 +383,23 @@ input[type="submit"] {
 }
 
 .submit {
-  margin-top: 0.7rem;
+  background-color: #71c7ec;
   border: 0.5px solid black;
   border-radius: 0.5rem;
-  width: 100%;
-  height: 3rem;
-  background-color: #71c7ec;
   color: black;
-  text-shadow: 1px 1px 3px white;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 1.25rem;
   font-weight: 600;
+  height: 3rem;
+  margin-top: 0.7rem;
+  text-shadow: 1px 1px 3px white;
+  width: 100%;
 }
 
 .footer {
   background-color: #71c7ec;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[4];
@@ -407,8 +409,6 @@ input[type="submit"] {
   margin: 0;
   margin-top: 1.4rem;
   padding-bottom: 0.7rem;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
 }
 
 .footer p {
@@ -419,67 +419,69 @@ input[type="submit"] {
 }
 
 .footer img {
-  width: 3rem;
-  stroke: gray;
   fill: gray;
+  stroke: gray;
+  width: 3rem;
 }
 
 .footer div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
 .disclaimer {
-  padding: 0.5rem;
   background-color: #71c7ec;
   border-top: solid 1px black;
   font-size: 0.5rem;
   margin-top: 0.7rem;
+  padding: 0.5rem;
 }
 
 .form-select {
-  display: block;
-  width: 100%;
-  padding: 0.375rem 2.25rem 0.375rem 0.75rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #212529;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  appearance: none;
+  appearance: none;
   background-color: #fff;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
-  background-repeat: no-repeat;
   background-position: right 0.75rem center;
+  background-repeat: no-repeat;
   background-size: 16px 12px;
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+  color: #212529;
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+  width: 100%;
 }
 
 .form-select:focus {
   border-color: #71c7ec;
-  outline: 0;
   -webkit-box-shadow: 0 0 0 0.25rem #71c7ec;
           box-shadow: 0 0 0 0.25rem #71c7ec;
+  outline: 0;
 }
 
 .form-select[multiple],
-.form-select[size]:not([size="1"]) {
-  padding-right: 0.75rem;
+.form-select[size]:not([size='1']) {
   background-image: none;
+  padding-right: 0.75rem;
 }
 
 .form-select:disabled {
-  color: #6c757d;
   background-color: #e9ecef;
+  color: #6c757d;
 }
 
 .form-select:-moz-focusring {
@@ -488,34 +490,36 @@ input[type="submit"] {
 }
 
 .calendar {
-  display: block;
-  width: 100%;
-  padding: 0.375rem 0.75rem 0.375rem 0.75rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #212529;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  appearance: none;
+  appearance: none;
   background-color: #fff;
-  background-repeat: no-repeat;
   background-position: right 0.75rem center;
+  background-repeat: no-repeat;
   background-size: 16px 12px;
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+  color: #212529;
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 0.375rem 0.75rem;
+  width: 100%;
 }
 
 .calendar:focus {
   border-color: #86b7fe;
-  outline: 0;
   -webkit-box-shadow: 0 0 0 0.25rem #71c7ec;
           box-shadow: 0 0 0 0.25rem #71c7ec;
+  outline: 0;
 }
 
 .calendar:disabled {
-  color: #6c757d;
   background-color: #e9ecef;
+  color: #6c757d;
 }
 
 .calendar:-moz-focusring {
@@ -524,34 +528,36 @@ input[type="submit"] {
 }
 
 .phone-input {
-  display: block;
-  width: 100%;
-  padding: 0.375rem 0.75rem 0.375rem 0.75rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #212529;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  appearance: none;
+  appearance: none;
   background-color: #fff;
-  background-repeat: no-repeat;
   background-position: right 0.75rem center;
+  background-repeat: no-repeat;
   background-size: 16px 12px;
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+  color: #212529;
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 0.375rem 0.75rem;
+  width: 100%;
 }
 
 .phone-input:focus {
   border-color: #86b7fe;
-  outline: 0;
   -webkit-box-shadow: 0 0 0 0.25rem #71c7ec;
           box-shadow: 0 0 0 0.25rem #71c7ec;
+  outline: 0;
 }
 
 .phone-input:disabled {
-  color: #6c757d;
   background-color: #e9ecef;
+  color: #6c757d;
 }
 
 .phone-input:-moz-focusring {
@@ -560,34 +566,36 @@ input[type="submit"] {
 }
 
 .input-name {
-  display: block;
-  width: 100%;
-  padding: 0.375rem 0.75rem 0.375rem 0.75rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #212529;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  appearance: none;
+  appearance: none;
   background-color: #fff;
-  background-repeat: no-repeat;
   background-position: right 0.75rem center;
+  background-repeat: no-repeat;
   background-size: 16px 12px;
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+  color: #212529;
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 0.375rem 0.75rem;
+  width: 100%;
 }
 
 .input-name:focus {
   border-color: #86b7fe;
-  outline: 0;
   -webkit-box-shadow: 0 0 0 0.25rem #71c7ec;
           box-shadow: 0 0 0 0.25rem #71c7ec;
+  outline: 0;
 }
 
 .input-name:disabled {
-  color: #6c757d;
   background-color: #e9ecef;
+  color: #6c757d;
 }
 
 .input-name:-moz-focusring {
@@ -596,24 +604,30 @@ input[type="submit"] {
 }
 
 .popup {
-  position: fixed;
-  top: 0;
-  z-index: 10;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
   display: none;
+  height: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
 }
 
 .popupcontent {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -624,19 +638,15 @@ input[type="submit"] {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  padding: 0.5rem;
   text-align: center;
   width: 80vw;
-  border: 1px solid black;
-  border-radius: 5px;
-  padding: .5rem;
-  background-color: white;
 }
 
 .popuptext {
-  margin: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -647,23 +657,21 @@ input[type="submit"] {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  margin: 0;
 }
 
 .btn-thankyou2 {
+  background-color: gray;
   border: none;
   border-radius: 3px;
-  background-color: gray;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem;
+  text-shadow: 1px 1px 3px black;
   /* margin-top: .5rem;
 	margin-bottom: .5rem; */
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-  color: white;
-  text-shadow: 1px 1px 3px black;
-  font-weight: bold;
-  padding: .5rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -677,8 +685,8 @@ input[type="submit"] {
 
 .btn-thankyou2:hover {
   background-color: #71c7ec;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 @-moz-document url-prefix() {
@@ -688,9 +696,6 @@ input[type="submit"] {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  body {
-    font-size: 20px;
-  }
   .nav {
     -ms-grid-columns: 10% 35% 1fr 1fr 2.5fr;
         grid-template-columns: 10% 35% 1fr 1fr 2.5fr;
@@ -700,10 +705,10 @@ input[type="submit"] {
   }
   .slideout {
     display: contents;
-    -ms-grid-column: 3;
-        grid-column-start: 3;
     -ms-grid-column-span: 3;
         grid-column-end: span 3;
+    -ms-grid-column: 3;
+        grid-column-start: 3;
     width: 100%;
   }
   .burger {
@@ -714,53 +719,56 @@ input[type="submit"] {
     overflow: auto;
   }
   .slideout button {
+    background-color: #71c7ec;
+    border-width: 0;
+    font-family: 'Poppins', sans-serif;
     font-size: 0.7em;
     font-weight: 600;
-    font-family: "Poppins", sans-serif;
-    border-width: 0;
     margin: 0;
-    background-color: #71c7ec;
     padding: 0;
   }
   .slideout button a {
-    width: auto;
-    height: 3.5rem;
-    padding: 0;
-    line-height: 3.5rem;
-    text-decoration: none;
     color: black;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    padding: 0;
+    text-decoration: none;
     text-shadow: gray 1px 1px 2px;
+    width: auto;
   }
   .slideout button:nth-child(1) {
-    border-bottom: none;
     background: #71c7ec;
+    border-bottom: none;
+    grid-column-end: 4;
     -ms-grid-column: 3;
         grid-column-start: 3;
-    grid-column-end: 4;
   }
   .slideout button:nth-child(2) {
     border-bottom: none;
+    grid-column-end: 5;
     -ms-grid-column: 4;
         grid-column-start: 4;
-    grid-column-end: 5;
   }
   .slideout button:nth-child(3) {
     border-bottom: none;
+    grid-column-end: 6;
     -ms-grid-column: 5;
         grid-column-start: 5;
-    grid-column-end: 6;
   }
   .logo-text {
     line-height: 0;
     text-indent: -99999px;
   }
   .logo-text::after {
-    content: "San Antonio Central Dentistry";
-    text-indent: 0;
-    line-height: initial;
+    content: 'San Antonio Central Dentistry';
     font-size: 18px;
+    line-height: initial;
+    text-indent: 0;
   }
   .form-appt {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -768,20 +776,17 @@ input[type="submit"] {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
   .form-appt * {
-    max-width: 50%;
     line-height: 2;
+    max-width: 50%;
+  }
+  body {
+    font-size: 20px;
   }
 }
 
 @media (min-width: 1024px) and (max-width: 1439px) {
-  body {
-    font-size: 24px;
-  }
   .nav {
     -ms-grid-columns: 10% 35% 1fr 1fr 2.5fr;
         grid-template-columns: 10% 35% 1fr 1fr 2.5fr;
@@ -791,10 +796,10 @@ input[type="submit"] {
   }
   .slideout {
     display: contents;
-    -ms-grid-column: 3;
-        grid-column-start: 3;
     -ms-grid-column-span: 3;
         grid-column-end: span 3;
+    -ms-grid-column: 3;
+        grid-column-start: 3;
     width: 100%;
   }
   .burger {
@@ -805,53 +810,56 @@ input[type="submit"] {
     overflow: auto;
   }
   .slideout button {
+    background-color: #71c7ec;
+    border-width: 0;
+    font-family: 'Poppins', sans-serif;
     font-size: 0.7em;
     font-weight: 600;
-    font-family: "Poppins", sans-serif;
-    border-width: 0;
     margin: 0;
-    background-color: #71c7ec;
     padding: 0;
   }
   .slideout button a {
-    width: auto;
-    height: 3.5rem;
-    padding: 0;
-    line-height: 3.5rem;
-    text-decoration: none;
     color: black;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    padding: 0;
+    text-decoration: none;
     text-shadow: gray 1px 1px 2px;
+    width: auto;
   }
   .slideout button:nth-child(1) {
-    border-bottom: none;
     background: #71c7ec;
+    border-bottom: none;
+    grid-column-end: 4;
     -ms-grid-column: 3;
         grid-column-start: 3;
-    grid-column-end: 4;
   }
   .slideout button:nth-child(2) {
     border-bottom: none;
+    grid-column-end: 5;
     -ms-grid-column: 4;
         grid-column-start: 4;
-    grid-column-end: 5;
   }
   .slideout button:nth-child(3) {
     border-bottom: none;
+    grid-column-end: 6;
     -ms-grid-column: 5;
         grid-column-start: 5;
-    grid-column-end: 6;
   }
   .logo-text {
     line-height: 0;
     text-indent: -99999px;
   }
   .logo-text::after {
-    content: "San Antonio Central Dentistry";
-    text-indent: 0;
-    line-height: initial;
+    content: 'San Antonio Central Dentistry';
     font-size: 22px;
+    line-height: initial;
+    text-indent: 0;
   }
   .form-appt {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -859,13 +867,13 @@ input[type="submit"] {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
   .form-appt * {
-    max-width: 50%;
     line-height: 2;
+    max-width: 50%;
+  }
+  body {
+    font-size: 24px;
   }
   .wrapper-staff {
     -webkit-column-gap: 10%;
@@ -874,9 +882,6 @@ input[type="submit"] {
 }
 
 @media (min-width: 1440px) and (max-width: 2559px) {
-  body {
-    font-size: 24px;
-  }
   .nav {
     -ms-grid-columns: 10% 35% 1fr 1fr 2.5fr;
         grid-template-columns: 10% 35% 1fr 1fr 2.5fr;
@@ -886,10 +891,10 @@ input[type="submit"] {
   }
   .slideout {
     display: contents;
-    -ms-grid-column: 3;
-        grid-column-start: 3;
     -ms-grid-column-span: 3;
         grid-column-end: span 3;
+    -ms-grid-column: 3;
+        grid-column-start: 3;
     width: 100%;
   }
   .burger {
@@ -900,53 +905,56 @@ input[type="submit"] {
     overflow: auto;
   }
   .slideout button {
+    background-color: #71c7ec;
+    border-width: 0;
+    font-family: 'Poppins', sans-serif;
     font-size: 0.7em;
     font-weight: 600;
-    font-family: "Poppins", sans-serif;
-    border-width: 0;
     margin: 0;
-    background-color: #71c7ec;
     padding: 0;
   }
   .slideout button a {
-    width: auto;
-    height: 3.5rem;
-    padding: 0;
-    line-height: 3.5rem;
-    text-decoration: none;
     color: black;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    padding: 0;
+    text-decoration: none;
     text-shadow: gray 1px 1px 2px;
+    width: auto;
   }
   .slideout button:nth-child(1) {
-    border-bottom: none;
     background: #71c7ec;
+    border-bottom: none;
+    grid-column-end: 4;
     -ms-grid-column: 3;
         grid-column-start: 3;
-    grid-column-end: 4;
   }
   .slideout button:nth-child(2) {
     border-bottom: none;
+    grid-column-end: 5;
     -ms-grid-column: 4;
         grid-column-start: 4;
-    grid-column-end: 5;
   }
   .slideout button:nth-child(3) {
     border-bottom: none;
+    grid-column-end: 6;
     -ms-grid-column: 5;
         grid-column-start: 5;
-    grid-column-end: 6;
   }
   .logo-text {
     line-height: 0;
     text-indent: -99999px;
   }
   .logo-text::after {
-    content: "San Antonio Central Dentistry";
-    text-indent: 0;
-    line-height: initial;
+    content: 'San Antonio Central Dentistry';
     font-size: 22px;
+    line-height: initial;
+    text-indent: 0;
   }
   .form-appt {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -954,13 +962,13 @@ input[type="submit"] {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
   .form-appt * {
-    max-width: 50%;
     line-height: 2;
+    max-width: 50%;
+  }
+  body {
+    font-size: 24px;
   }
   .wrapper-staff {
     -webkit-column-gap: 5%;
@@ -978,10 +986,10 @@ input[type="submit"] {
   }
   .slideout {
     display: contents;
-    -ms-grid-column: 3;
-        grid-column-start: 3;
     -ms-grid-column-span: 3;
         grid-column-end: span 3;
+    -ms-grid-column: 3;
+        grid-column-start: 3;
     width: 100%;
   }
   .burger {
@@ -992,53 +1000,56 @@ input[type="submit"] {
     overflow: auto;
   }
   .slideout button {
+    background-color: #71c7ec;
+    border-width: 0;
+    font-family: 'Poppins', sans-serif;
     font-size: 0.7em;
     font-weight: 600;
-    font-family: "Poppins", sans-serif;
-    border-width: 0;
     margin: 0;
-    background-color: #71c7ec;
     padding: 0;
   }
   .slideout button a {
-    width: auto;
-    height: 3.5rem;
-    padding: 0;
-    line-height: 3.5rem;
-    text-decoration: none;
     color: black;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    padding: 0;
+    text-decoration: none;
     text-shadow: gray 1px 1px 2px;
+    width: auto;
   }
   .slideout button:nth-child(1) {
-    border-bottom: none;
     background: #71c7ec;
+    border-bottom: none;
+    grid-column-end: 4;
     -ms-grid-column: 3;
         grid-column-start: 3;
-    grid-column-end: 4;
   }
   .slideout button:nth-child(2) {
     border-bottom: none;
+    grid-column-end: 5;
     -ms-grid-column: 4;
         grid-column-start: 4;
-    grid-column-end: 5;
   }
   .slideout button:nth-child(3) {
     border-bottom: none;
+    grid-column-end: 6;
     -ms-grid-column: 5;
         grid-column-start: 5;
-    grid-column-end: 6;
   }
   .logo-text {
     line-height: 0;
     text-indent: -99999px;
   }
   .logo-text::after {
-    content: "San Antonio Central Dentistry";
-    text-indent: 0;
-    line-height: initial;
+    content: 'San Antonio Central Dentistry';
     font-size: 22px;
+    line-height: initial;
+    text-indent: 0;
   }
   .form-appt {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1046,13 +1057,10 @@ input[type="submit"] {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
   .form-appt * {
-    max-width: 50%;
     line-height: 2;
+    max-width: 50%;
   }
   body {
     font-size: 40px;
@@ -1070,8 +1078,8 @@ input[type="submit"] {
     height: 5rem;
   }
   .nav * {
-    height: 5rem;
     font-size: 40px;
+    height: 5rem;
   }
   .nav button a {
     height: 5rem;
@@ -1084,24 +1092,27 @@ input[type="submit"] {
     height: 1.75em;
     margin: 0.125em auto;
   }
-  .input-name, .calendar, #select-insurance, .phone-input {
-    line-height: 3;
+  .input-name,
+  .calendar,
+  #select-insurance,
+  .phone-input {
     font-size: 30px;
+    line-height: 3;
   }
   .submit {
-    max-width: 20%;
     font-size: 30px;
     line-height: 35px;
+    max-width: 20%;
     vertical-align: middle;
   }
   .disclaimer {
     font-size: 20px;
   }
   .scr-btn {
-    width: 6rem;
     height: 6rem;
     -webkit-transform: translateY(8rem);
             transform: translateY(8rem);
+    width: 6rem;
   }
   .showBtn {
     -webkit-transform: translateY(0);
@@ -1114,7 +1125,7 @@ input[type="submit"] {
 
 @media (min-width: 1024px) {
   .cool-image {
-    background-image: url("https://images.unsplash.com/photo-1599410110298-56ab00841c11?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80");
+    background-image: url("/img/photo-1599410110298-56ab00841c11 (1).jpg");
     background-position: 0% 30%;
   }
   .footer {
@@ -1134,25 +1145,25 @@ input[type="submit"] {
     margin-bottom: 1em;
   }
   .nav button {
-    -webkit-transition: all .15s ease-in-out;
-    transition: all .15s ease-in-out;
+    -webkit-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
   }
   .nav button:hover {
     background-color: #95d5f1;
-    -webkit-transition: all .15s ease-in-out;
-    transition: all .15s ease-in-out;
+    -webkit-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
   }
   .footer img {
     -webkit-filter: grayscale(100);
             filter: grayscale(100);
-    -webkit-transition: all .15s ease-in-out;
-    transition: all .15s ease-in-out;
+    -webkit-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
   }
   .footer img:hover {
     -webkit-filter: none;
             filter: none;
-    -webkit-transition: all .15s ease-in-out;
-    transition: all .15s ease-in-out;
+    -webkit-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
   }
   .popupcontent {
     width: 40vw;
