@@ -777,7 +777,7 @@ input[type='submit'] {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .form-appt input:not(.submit), select {
+  .form-appt input:not(.submit), select, .form-select {
     line-height: 2;
   }
   .form-appt input, select {
@@ -870,7 +870,7 @@ input[type='submit'] {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .form-appt input:not(.submit), select {
+  .form-appt input:not(.submit), select, .form-select {
     line-height: 2;
   }
   .form-appt input, select {
@@ -967,7 +967,7 @@ input[type='submit'] {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .form-appt input:not(.submit), select {
+  .form-appt input:not(.submit), select, .form-select {
     line-height: 2;
   }
   .form-appt input, select {
@@ -1064,7 +1064,7 @@ input[type='submit'] {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .form-appt input:not(.submit), select {
+  .form-appt input:not(.submit), select, .form-select {
     line-height: 2;
   }
   .form-appt input, select {

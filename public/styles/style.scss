@@ -647,7 +647,7 @@ input[type='submit'] {
     flex-direction: column;
   }
 
-  .form-appt input:not(.submit), select {
+  .form-appt input:not(.submit), select, .form-select {
     line-height: 2;
   }
 
